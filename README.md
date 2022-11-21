@@ -40,3 +40,9 @@ any issues you experience while you are running this
 pre-release version.
 
 Error: texinfo: undefined method `on_monterey' for #<Class:0x00007fab3e924bb8>
+
+## Run mpi script
+
+mpiexec -n 4 python xx.py
+
+`mpiexec -n 4 python src/mpi_demo.py`

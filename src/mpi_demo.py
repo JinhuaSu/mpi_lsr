@@ -14,7 +14,9 @@ if rank == 0:
     comm.Send([data, MPI.INT], dest=1, tag=77)
 elif rank == 1:
     data = numpy.empty(1000, dtype='i')
+    print(data)
     comm.Recv([data, MPI.INT], source=0, tag=77)
+    print(data)
 
 # automatic MPI datatype discovery
 if rank == 0:
@@ -22,4 +24,7 @@ if rank == 0:
     comm.Send(data, dest=1, tag=13)
 elif rank == 1:
     data = numpy.empty(100, dtype=numpy.float64)
+    print(data)
     comm.Recv(data, source=0, tag=13)
+    print(data)
+# %%
